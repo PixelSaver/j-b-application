@@ -6,6 +6,19 @@
 [ext_resource type="Script" uid="uid://cfxjn4pcyytqo" path="res://scenes/ssn.gd" id="4_doykk"]
 [ext_resource type="Script" uid="uid://c4obmdawyvxkm" path="res://scenes/gender.gd" id="5_1i0c2"]
 [ext_resource type="Script" uid="uid://cib87bnqsrfcv" path="res://scenes/menu_button.gd" id="6_cl1i0"]
+[ext_resource type="Script" uid="uid://d0a0ixj27m7nv" path="res://scenes/submit.gd" id="7_brd6c"]
+[ext_resource type="Script" uid="uid://crut4r5gwigu0" path="res://utilities/ui/menus/default_button.gd" id="8_f1qxw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqs2s"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.90588236)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Application" type="Control" unique_id=284789251]
 layout_mode = 3
@@ -430,3 +443,53 @@ mouse_filter = 1
 bbcode_enabled = true
 fit_content = true
 scroll_active = false
+
+[node name="Submit" type="VBoxContainer" parent="ScrollContainer/Control/MarginContainer/VBoxContainer" unique_id=1264315668 node_paths=PackedStringArray("submit_button", "error_text")]
+layout_mode = 2
+script = ExtResource("7_brd6c")
+submit_button = NodePath("HBoxContainer/DefaultButton")
+error_text = NodePath("Error")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/Submit" unique_id=1576517069]
+layout_mode = 2
+alignment = 1
+
+[node name="DefaultButton" type="Button" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/Submit/HBoxContainer" unique_id=1352993337]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+script = ExtResource("8_f1qxw")
+metadata/_custom_type_script = "uid://crut4r5gwigu0"
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/Submit/HBoxContainer/DefaultButton" unique_id=168267097]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_gqs2s")
+
+[node name="@RichTextLabel@501612" type="RichTextLabel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/Submit/HBoxContainer/DefaultButton" unique_id=2036655771]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+bbcode_enabled = true
+text = "Submit Application"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Error" type="RichTextLabel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/Submit" unique_id=11474161]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1

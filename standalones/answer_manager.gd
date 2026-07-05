@@ -35,9 +35,12 @@ func _ready() -> void:
 func register_answer(id:Answers, answer:Answer) -> void:
 	answers.set(id, answer)
 
+func get_answer_name(id:Answers):
+	return answer_names.get(id)
+
 func get_unfulfilled_questions() -> Array[Answers]:
 	var out :Array[Answers] = []
-	for id in Answers:
+	for id in range(Answers.size()):
 		if answers.get(id) == null: 
 			out.append(id)
 			continue
