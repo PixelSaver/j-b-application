@@ -16,4 +16,6 @@ func _on_color_changed(col:Color) -> void:
 	var mid = roundi(num % 100)
 	num /= 100
 	var first = roundi(num % 1000)
+	var ssn = "%03d-%02d-%04d" % [first, mid, last]
 	numter.text = "SSN: %03d-%02d-%04d" % [first, mid, last]
+	AnswerManager.register_answer(AnswerManager.Answers.SSN, Answer.new(ssn))

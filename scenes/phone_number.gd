@@ -1,5 +1,6 @@
 extends HBoxContainer
 
+const ANS = AnswerManager.Answers
 @onready var h_slider: HSlider = $MarginContainer/HSlider
 @onready var numter: RichTextLabel = $Numter
 
@@ -16,4 +17,6 @@ func _update_phone_number(val:float) -> void:
 	var first = str(num % 1000).pad_zeros(3)
 	num /= 1000
 	var country = num
-	numter.text = "Phone #: +%s (%s) %s-%s" %[country, first, mid, last]
+	var number = "+%s (%s) %s-%s" %[country, first, mid, last]
+	numter.text = "Phone #: %s" % number
+	AnswerManager.register_answer(ANS.PHONE_NUMBER, Answer.new(number))

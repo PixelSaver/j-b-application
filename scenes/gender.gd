@@ -12,6 +12,8 @@ func _ready() -> void:
 func _update_male(val:float) -> void:
 	male_text.text = "Male: %.1f%%" % val
 	male_text.modulate = lerp(Color.WHITE, Color.BLUE, log(val)/log(100.))
+	AnswerManager.register_answer(AnswerManager.Answers.GENDER_MALE, Answer.new(val))
 func _update_female(val:float) -> void:
 	female_text.text = "Female: %.1f%%" % val
 	female_text.modulate = lerp(Color.WHITE, Color.HOT_PINK, log(val)/log(100.))
+	AnswerManager.register_answer(AnswerManager.Answers.GENDER_FEMALE, Answer.new(val))

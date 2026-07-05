@@ -217,6 +217,7 @@ popup/item_1/text = "Probably."
 popup/item_1/id = 1
 script = ExtResource("6_cl1i0")
 _text = NodePath("RichTextLabel")
+id = 6
 
 [node name="Panel" type="Panel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/VBoxContainer/Q1/MenuButton" unique_id=66573005]
 layout_mode = 1
@@ -263,6 +264,7 @@ popup/item_1/text = "I don't want this job, I'd rather do manual labor"
 popup/item_1/id = 1
 script = ExtResource("6_cl1i0")
 _text = NodePath("RichTextLabel")
+id = 7
 
 [node name="Panel" type="Panel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/VBoxContainer/Q2/MenuButton" unique_id=80656190]
 layout_mode = 1
@@ -304,12 +306,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 item_count = 2
-popup/item_0/text = "Yes I have. Back in my day they used to have this policy called Don't ask Don't tell, you know that sonny? They used to 'allow'"
+popup/item_0/text = "Back in my day they used to have this policy called Don't ask Don't tell, you know that sonny? They used to 'allow'"
 popup/item_0/id = 0
 popup/item_1/text = "No, I'm unpatriotic and am calling ICE for a vacation immediately."
 popup/item_1/id = 1
 script = ExtResource("6_cl1i0")
 _text = NodePath("RichTextLabel")
+id = 8
 
 [node name="Panel" type="Panel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/VBoxContainer/Q3/MenuButton" unique_id=2091185671]
 layout_mode = 1
@@ -356,6 +359,7 @@ popup/item_1/text = "Yes, I've murdered and I'm willing to do it again. Can you 
 popup/item_1/id = 1
 script = ExtResource("6_cl1i0")
 _text = NodePath("RichTextLabel")
+id = 9
 
 [node name="Panel" type="Panel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/VBoxContainer/Q4/MenuButton" unique_id=150111819]
 layout_mode = 1
@@ -367,6 +371,55 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/VBoxContainer/Q4/MenuButton" unique_id=92326544]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="Q5" type="HBoxContainer" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/VBoxContainer" unique_id=46548132]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Text" type="RichTextLabel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/VBoxContainer/Q5" unique_id=263393461]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.4
+bbcode_enabled = true
+text = "What was your GPA in High School?"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MenuButton" type="MenuButton" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/VBoxContainer/Q5" unique_id=1528835267 node_paths=PackedStringArray("_text")]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+item_count = 3
+popup/item_0/text = "4.00 unweighted"
+popup/item_0/id = 0
+popup/item_1/text = "5+ weighted"
+popup/item_1/id = 1
+popup/item_2/text = "I cannot be hired due to my lack of intelligence"
+popup/item_2/id = 2
+script = ExtResource("6_cl1i0")
+_text = NodePath("RichTextLabel")
+id = 10
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/VBoxContainer/Q5/MenuButton" unique_id=671603267]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/VBoxContainer/Q5/MenuButton" unique_id=2094287954]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
