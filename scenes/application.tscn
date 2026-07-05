@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cgb2licocrmxe" path="res://scenes/application.gd" id="1_1frhs"]
 [ext_resource type="PackedScene" uid="uid://cbpwdioma08p8" path="res://scenes/name.tscn" id="2_1frhs"]
+[ext_resource type="Script" uid="uid://6m24k0hgp6v3" path="res://scenes/phone_number.gd" id="3_2a4x4"]
+[ext_resource type="Script" uid="uid://cfxjn4pcyytqo" path="res://scenes/ssn.gd" id="4_doykk"]
 
 [node name="Application" type="Control" unique_id=284789251]
 layout_mode = 3
@@ -45,6 +47,7 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Control/MarginContainer" unique_id=819391953]
 layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer" unique_id=258092485]
 clip_contents = false
@@ -62,3 +65,49 @@ layout_mode = 2
 
 [node name="Name" parent="ScrollContainer/Control/MarginContainer/VBoxContainer" unique_id=1719256860 instance=ExtResource("2_1frhs")]
 layout_mode = 2
+
+[node name="Number" type="HBoxContainer" parent="ScrollContainer/Control/MarginContainer/VBoxContainer" unique_id=2046339023]
+layout_mode = 2
+script = ExtResource("3_2a4x4")
+
+[node name="Numter" type="RichTextLabel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/Number" unique_id=128777038]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.4
+bbcode_enabled = true
+text = "Phone #:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/Number" unique_id=860770342]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 10
+
+[node name="HSlider" type="HSlider" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/Number/MarginContainer" unique_id=400319031]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 10000000000.0
+max_value = 9989999999999.0
+value = 10000000000.0
+exp_edit = true
+
+[node name="SSN" type="HBoxContainer" parent="ScrollContainer/Control/MarginContainer/VBoxContainer" unique_id=877842521]
+layout_mode = 2
+script = ExtResource("4_doykk")
+
+[node name="Numter" type="RichTextLabel" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/SSN" unique_id=1705121486]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.4
+bbcode_enabled = true
+text = "SSN:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="ScrollContainer/Control/MarginContainer/VBoxContainer/SSN" unique_id=997068439]
+layout_mode = 2
+size_flags_horizontal = 3
