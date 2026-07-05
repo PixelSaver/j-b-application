@@ -1,5 +1,7 @@
+#@tool
 extends MenuButton
 
+#@export_tool_button("Load Names") var load_names_action = load_names
 @export var names: PackedStringArray
 @onready var line_edit: LineEdit = $LineEdit
 
@@ -17,10 +19,10 @@ func _on_id_pressed(id:int) -> void:
 
 #func load_names():
 	#names.clear()
-	#var file := FileAccess.open("res://assets/names.txt", FileAccess.READ)
+	#var file := FileAccess.open("res://assets/last_names.txt", FileAccess.READ)
 	#while !file.eof_reached():
 		#var line := file.get_line().strip_edges()
 		#if line.is_empty():
 			#continue
-		#names.append(line)
+		#names.append(line.capitalize())
 	#notify_property_list_changed()
