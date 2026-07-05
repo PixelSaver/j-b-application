@@ -11,7 +11,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fdur0"]
 
 [resource]
-default_font_size = 40
+default_font_size = 25
 Button/styles/disabled = SubResource("StyleBoxEmpty_gkedh")
 Button/styles/focus = SubResource("StyleBoxEmpty_plx5h")
 Button/styles/hover = SubResource("StyleBoxEmpty_c7qcy")
